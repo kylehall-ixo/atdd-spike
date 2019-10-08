@@ -1,9 +1,7 @@
 const assert = require('assert')
 const { Given, When, Then } = require('cucumber')
 
-function isItFriday(today) {
-    return "Nope"
-}
+const isItFriday = require('../../src/isItFriday').isItFriday
 
 Given('today is Sunday', function () {
     this.today = 'Sunday'
