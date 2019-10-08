@@ -3,22 +3,14 @@ const { Given, When, Then } = require('cucumber')
 
 const isItFriday = require('../../src/isItFriday').isItFriday
 
-Given('today is Sunday', function() {
-  this.today = 'Sunday'
+Given('today is {string}', function(givenDay) {
+  this.today = givenDay
 })
 
 When('I ask if today is Friday', function() {
   this.actual = isItFriday(this.today)
 })
 
-Then('I should be told "Nope"', function() {
-  assert.equal(this.actual, 'Nope')
-})
-
-Given('today is Friday', function() {
-  this.today = 'Friday'
-})
-
-Then('I should be told "Yep!"', function() {
-  assert.equal(this.actual, 'Yep!')
+Then('I should be told {string}', function(expectedAnswer) {
+  assert.equal(this.actual, expectedAnswer)
 })
