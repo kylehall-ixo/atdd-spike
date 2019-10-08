@@ -7,6 +7,9 @@
   "author": "Kyle Hall <kyle.d.hall@accenture.com>",
   "license": "MIT",
   "private": false,
+  "scripts": {
+      "acceptance": "./node_modules/.bin/cucumber-js"
+  },
   "devDependencies": {
     "cucumber": "^6.0.2",
     "jest": "^24.9.0"
