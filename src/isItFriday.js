@@ -1,7 +1,7 @@
 function isItFriday(today) {
-    return "Nope"
+  return today === 'Friday' ? 'Yep!' : 'Nope'
 }
 
 module.exports = {
-    isItFriday
+  isItFriday
 }
